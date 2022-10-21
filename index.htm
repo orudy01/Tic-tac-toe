@@ -6,37 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TTT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-
+        <div class="title-container">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
     </header>
 
     <main>
-        <div class="board circle" id="board">
-            <div class="cell x" data-cell></div>
-            <div class="cell circle" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
+        <div class="board" id="board">
+
         </div>
     </main>
 
     <footer>
-
+        <div class="footer-container">
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Rodolfo Ortega
+            </p>
+        </div>
     </footer>
 
     <div class="modal" id="gameOverModal">
-       <div class="game-over-msg" id="gameOverMsg"></div>
-       <button id="restartBtn">Restart</button>
+        <div class="restart-container">
+            <div class="game-over-msg" id="gameOverMsg">
+                GAME OVER
+            </div>
+            <button class="button" id="restartBtn" onClick="window.location.reload();">Play Again</button>
+        </div>
     </div>
+
+    <div id="overlay"></div>
 
 </body>
 
